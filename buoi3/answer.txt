@@ -1,0 +1,30 @@
+Câu 1: Is JAVA a Pass by Value or a Pass by Reference programming language?
+Pass by value: The method parameter values are copied to another variable and then the copied object is passed to the method. That's why it's called pass by value.
+Pass by reference: An alias or reference to the actual parameter is passed to the method. That's why it's called pass by reference.
+So, Java is always Pass by Value.
+Câu 3: After the call of swap (jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+Code by Java:
+	public static void swap(Object o1, Object o2) {
+		Object tmp = o1;
+		o1 = o2;
+		o2 = tmp;
+	}
+Tương ứng trong C:
+	Void swap(Object * o1, Object * o2){
+		Object * tmp = o1;
+o1 = o2;
+		o2 = tmp;
+Because in the swap function o1 and o2 act like pointers in C and are passed-by-value. This function in C doesn't work -> meaningless swap function -> two objects still remain.
+MySway function:
+public static void MySwap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+		String temp = dvd1.getTitle();
+		dvd1.setTitle(dvd2.getTitle());
+		dvd2.setTitle(temp);
+	}
+
+After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
+6:
+Loại trả về của phương thức toString là: String
+
+
+
